@@ -1,0 +1,138 @@
+body{
+    background: #F9FAFC;
+}
+
+.header{
+    left: 0%;
+    right: -87.5%;
+    top: 0.2%;
+    bottom: 93.85%;
+    height: 60px;
+
+    background: #FFFFFF;
+}
+.header__breadcrumbs:first-child{
+    margin-left: 120px;
+}
+.header__breadcrumbs{
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 25px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.685714px;
+
+    color: #252F48;
+}
+
+
+.header__vector{
+    width: 6px;
+    height: 8.45px;
+}
+
+.header__user{
+    display: inline-block;
+    width: 13%;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+}
+.header__photos{
+    display: inline;
+    padding-top: auto;
+    width: 22px;
+    height: 22px;
+}
+.header__name{
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.28px;
+
+    color: #252F48;
+}
+
+
+.sidenav{
+    position: absolute;
+    width: 80px;
+    top: 0%;
+    bottom: 0%;
+
+    background: #01134E;
+}
+.sidenav__logo{
+    position: absolute;
+    left: 23px;
+    right: 63.98%;
+    top: 16px;
+    bottom: 93.01%;
+}
+
+.sidenav__calendar{
+    position: absolute;
+    left: 30px;
+    right: 68.94%;
+    top: 16.48%;
+    bottom: 80.84%;
+}
+.sidenav__notification{
+    position: absolute;
+    width: 19px;
+    height: 20px;
+    left: 41px;
+    top: 108px;
+}
+
+.sidenav__profile{
+    position: absolute;
+    left: 30px;
+    right: 69.57%;
+    top: 25.84%;
+    bottom: 71.77%;
+
+    mix-blend-mode: normal;
+}
+
+.sidenav__settings{
+    position: absolute;
+    left: 30px;
+    right: 68.94%;
+    top: 34.95%;
+    bottom: 62.45%;
+}
+
+.sidenav__people{
+    position: absolute;
+    left: 30px;
+    right: 68.94%;
+    top: 44.18%;
+    bottom: 53.19%;
+}
+
+.sidenav__message{
+    position: absolute;
+    left: 30px;
+    right: 68.94%;
+    top: 53.45%;
+    bottom: 44.45%;
+}
+.sidenav__selected{
+    position: absolute;
+    left: 0%;
+    right: 99.48%;
+    top: 352px;
+    bottom: 57.03%;
+
+    background: #0AD69C;
+}
+
+
