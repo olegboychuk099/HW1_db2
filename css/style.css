@@ -5,6 +5,7 @@ body {
     height: 100vh;
 }
 
+
 /*----------------------------------------sidebar----------------------------------------*/
 .sidebar {
     background-color: #01134e;
@@ -330,7 +331,7 @@ header {
     color: #222428;
     width: 330px;
     font-family: "Roboto", sans-serif;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
