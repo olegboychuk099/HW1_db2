@@ -111,6 +111,11 @@ header {
     box-sizing: border-box;
     overflow-y: scroll;
 }
+@media only screen and (max-width: 960px) {
+    .chats {
+        display: none;
+    }
+}
 
 .chat {
     position: relative;
