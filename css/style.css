@@ -35,7 +35,7 @@ svg:hover path{
     fill: white;
     opacity: 1;
     fill-opacity: 1;
-    transition: .5s fill;
+    transition: .5s;
 }
 
 .sidebar__notification--one {
@@ -190,6 +190,18 @@ header{
 }
 
 /*----------------------------------------send-field----------------------------------------*/
+
+.message__date p {
+    text-align: center;
+    font-family: "Exo 2",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    opacity: .5;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    color: rgba(37, 47, 72, 0.5);
+}
 .send-field{
     box-shadow: 0px 0px 20px rgba(153, 163, 174, 0.146541);
     display: flex;
@@ -241,7 +253,7 @@ header{
 }
 
 .message__friend,
-.message__my {
+.message__user {
     margin-bottom: 11px;
     margin-top: 11px;
 }
@@ -249,7 +261,7 @@ header{
     display: flex;
     align-items: flex-end;
 }
-.message__my {
+.message__user {
     display: flex;
     justify-content: flex-end;
     margin-right: 46px;
@@ -270,7 +282,7 @@ header{
     border-right: 7px solid #f7f9fc;
     border-bottom: 7px solid #f7f9fc;
 }
-.message__my .message__content::after {
+.message__user .message__content::after {
     content: "";
     position: absolute;
     right: -10px;
