@@ -1,4 +1,16 @@
 
+<!--mixin icons (svg)
+if !svg.someElse
+    li.sidebar__+=svg.name
+        a(href='#')
+            img(src=svg.photo, alt='photo')
+else
+    li.sidebar__+=svg.name
+        a(href='#')
+            img(src=svg.photo, alt='photo')
+        a.sidebar__notification--one(href='#')
+            img(src='img/one.svg', alt='1')
+-->
 <main>
   <header>
     <div class="breadcrumb"><a class="breadcrumb__item" href="#">Home</a><img class="breadcrumb__separator" src="img/right-arrow.svg" alt="right arrow"/><a class="breadcrumb__item" href="#">Network</a></div>
