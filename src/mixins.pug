@@ -1,0 +1,31 @@
+mixin friend (user)
+    if user.active
+        section.chats__chat.chat.chat--active
+            img.chat__photo(src=user.photo, alt='photo')
+            span.chat__name= user.name
+            if user.mute
+                img.chat__mute(src='img/mute.svg', alt='mute')
+            .chat__content
+                time.chat__time= user.time
+                span.chat__message= user.status
+    else
+        section.chats__chat.chat
+            img.chat__photo(src=user.photo, alt='photo')
+            span.chat__name= user.name
+            if user.mute
+                img.chat__mute(src='img/mute.svg', alt='mute')
+            .chat__content
+                time.chat__time= user.time
+                span.chat__message= user.status
+mixin message (fromWhom)
+    if !fromWhom.user
+        section.message__friend
+            img.message__photo(src=fromWhom.photo, alt='profile_photo')
+            .message__content
+                span.message__text= fromWhom.text
+                time.message__time= fromWhom.time
+    else
+        section.message__user
+            .message__content
+                span.message__text= fromWhom.text
+                time.message__time= fromWhom.time

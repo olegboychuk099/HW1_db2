@@ -1,0 +1,26 @@
+include mixins
+include info
+main
+    include header
+    .content
+        article.chats
+            each user in users
+                +friend(user)
+        article.messages
+            .search
+                img.search__icon(src='img/search.svg')
+                input.search__input(type='text', placeholder='Search message...')
+            .message-field
+                article.message
+                    section.message__date
+                        p Today, 17.03.2018
+                    each users in messagesInChat
+                        +message(users)
+            article.send-field
+                input.send-field__input(type='text', placeholder='Write a message...')
+                a.send-field__image(href='#')
+                    img(src='img/smile.svg')
+                a.send-field__image(href='#')
+                    img(src='img/clip.svg')
+                button.send-field__button(type='button')
+                    img(src='img/send.svg')
