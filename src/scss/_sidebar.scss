@@ -15,7 +15,7 @@
   margin-bottom: 23px;
 }
 
-.sidebar__notification, .sidebar__profile, .sidebar__settings, .sidebar__people, .sidebar__message {
+.sidebar__icons {
   display: flex;
   margin-top: 45%;
   width: 100%;
@@ -38,7 +38,7 @@ svg:hover path {
   top: 5px;
 }
 
-.sidebar__message {
+.sidebar__icons:last-child {
   border-left: 4px solid #0ad69c;
   box-sizing: border-box;
 }
