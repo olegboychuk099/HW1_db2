@@ -1,23 +1,13 @@
 mixin friend (user)
-    //TODO глянути на гіті в чувака з переменними
-    if user.active
-        section.chats__chat.chat.chat--active
-            img.chat__photo(src=user.photo, alt='photo')
-            span.chat__name= user.name
-            if user.mute
-                img.chat__mute(src='img/mute.svg', alt='mute')
-            .chat__content
-                time.chat__time= user.time
-                span.chat__message= user.status
-    else
-        section.chats__chat.chat
-            img.chat__photo(src=user.photo, alt='photo')
-            span.chat__name= user.name
-            if user.mute
-                img.chat__mute(src='img/mute.svg', alt='mute')
-            .chat__content
-                time.chat__time= user.time
-                span.chat__message= user.status
+    - let active = user.active ? " chat--active" : "";
+    section(class="chats__chat chat" + active)
+        img.chat__photo(src=user.photo, alt='photo')
+        span.chat__name= user.name
+        if user.mute
+            img.chat__mute(src='img/mute.svg', alt='mute')
+        .chat__content
+            time.chat__time= user.time
+            span.chat__message= user.status
 mixin message (fromWhom)
     if !fromWhom.user
         section.message__friend

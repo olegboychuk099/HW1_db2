@@ -33,7 +33,7 @@ function watch(){
     browserSync.init({
         server:{
             baseDir: './dist',
-            index: 'base.html'
+            index: 'index.html'
         }
     });
     gulp.watch('.src/scss/**/*.scss', style);

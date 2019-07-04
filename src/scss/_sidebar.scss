@@ -37,13 +37,6 @@
   position: relative;
 }
 
-svg:hover path {
-  fill: white;
-  opacity: 1;
-  fill-opacity: 1;
-  transition: .5s;
-}
-
 .sidebar__notification--one {
   position: absolute;
   left: 40px;

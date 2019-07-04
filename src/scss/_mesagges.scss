@@ -201,19 +201,19 @@
 .message__friend {
   display: flex;
   align-items: flex-end;
+  max-width: 600px;
+  margin-right: 20px;
   @include for-phone-only{
     margin-left: 20px;
-    margin-right: 20px;
   }
 }
 
 .message__user {
   display: flex;
   justify-content: flex-end;
-  margin-right: 46px;
+  margin-right: 20px;
   @include for-phone-only{
     margin-left: 20px;
-    margin-right: 20px;
   }
 }
 
