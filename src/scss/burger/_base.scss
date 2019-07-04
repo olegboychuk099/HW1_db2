@@ -2,8 +2,8 @@
 .hamburger {
   padding: $hamburger-padding-y $hamburger-padding-x;
   cursor: pointer;
-  top: 5px;
-  left: -10px;
+  top: 10px;
+  left: 5px;
   position: absolute;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -32,8 +32,7 @@
   }
 
   &.is-active {
-    top: 5px;
-    left: 70px;
+    z-index: 100;
     &:hover {
       @if $hamburger-hover-use-filter == true {
         filter: $hamburger-active-hover-filter;
