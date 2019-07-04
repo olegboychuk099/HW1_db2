@@ -1,3 +1,5 @@
+@import "./mixins";
+@import "./variables";
 /*----------------------------------------content----------------------------------------*/
 
 .content {
@@ -8,6 +10,10 @@
   margin: 44px 46px 0 122px;
   height: 72vh;
   border: 1px solid #EDF0F4;
+  @include for-tablet-landscape-up{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 .chats {
@@ -17,10 +23,17 @@
   border-right: 1px solid #f5f6f9;
   box-sizing: border-box;
   overflow-y: scroll;
+  @include for-tablet-landscape-up{
+    width: 100px;
+    overflow-x: hidden;
+  }
+  @include for-phone-only{
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 960px) {
-  .chats {
+.chat__name, .chat__content, .chat__mute{
+  @include for-tablet-landscape-up{
     display: none;
   }
 }
@@ -147,6 +160,7 @@
   margin-left: 18px;
   cursor: pointer;
   padding: 30px 0px;
+
 }
 
 .send-field__input::placeholder {
@@ -173,26 +187,34 @@
 }
 
 .message {
-  min-height: 100px;
+  min-height: 90px;
   font-family: "Roboto", sans-serif;
   font-size: 17px;
-  min-width: 300px;
 }
 
 .message__friend, .message__user {
   margin-bottom: 11px;
   margin-top: 11px;
+
 }
 
 .message__friend {
   display: flex;
   align-items: flex-end;
+  @include for-phone-only{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .message__user {
   display: flex;
   justify-content: flex-end;
   margin-right: 46px;
+  @include for-phone-only{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .message__content {
@@ -228,19 +250,19 @@
   margin-right: 11px;
   width: 36px;
   height: 36px;
+  @include for-phone-only{
+    display: none;
+  }
 }
 
 .message__text {
   padding: 20px 40px 20px 20px;
   color: #222428;
-  width: 330px;
+  //width: 330px;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.5;
-}
-
-.message__content {
-  min-width: 400px;
+  word-break: break-word;
 }
 
 .message__time {
@@ -248,7 +270,7 @@
   right: 3%;
   color: #9ba0ad;
   font-size: 12px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   bottom: 0%;
 }
 

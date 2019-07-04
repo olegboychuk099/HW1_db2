@@ -1,13 +1,25 @@
 /*----------------------------------------sidebar----------------------------------------*/
+@import "./mixins";
+@import "./variables";
 
 .sidebar {
   background-color: #01134e;
   width: 80px;
   height: 100%;
   float: left;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.5s ease;
+  @include for-tablet-landscape-up{
+    position: fixed;
+    display: none;
+    transition: all 0.5s ease;
+    &.active{
+      display: flex;
+    }
+  }
 }
 
 .sidebar__logo {

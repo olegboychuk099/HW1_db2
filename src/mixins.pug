@@ -1,4 +1,5 @@
 mixin friend (user)
+    //TODO глянути на гіті в чувака з переменними
     if user.active
         section.chats__chat.chat.chat--active
             img.chat__photo(src=user.photo, alt='photo')
@@ -36,17 +37,6 @@ mixin icons (svg)
                 img(src=svg.photo, alt='photo')
     else
         li.sidebar__icons
-            a(href='#')
-                img(src=svg.photo, alt='photo')
-            a.sidebar__notification--one(href='#')
-                img(src='img/one.svg', alt='1')
-//mixin icons (svg)
-    if !svg.someElse
-        li.sidebar__+=svg.name
-            a(href='#')
-                img(src=svg.photo, alt='photo')
-    else
-        li.sidebar__+=svg.name
             a(href='#')
                 img(src=svg.photo, alt='photo')
             a.sidebar__notification--one(href='#')
