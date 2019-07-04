@@ -101,6 +101,28 @@
 
 /*----------------------------------------search----------------------------------------*/
 
+.current-user__icon{
+  display: none;
+  @include for-phone-only{
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.current-user__chat-name{
+  display: none;
+  @include for-phone-only{
+    display: flex;
+    font-family: "Exo 2",sans-serif;
+    font-size: 18px;
+    width: 100px;
+    padding-left: 10px;
+    align-items: center;
+    color: #01134e;
+  }
+}
+
 .search {
   display: flex;
   justify-content: flex-start;
