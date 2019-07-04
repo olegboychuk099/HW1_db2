@@ -4,7 +4,139 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <title>messages</title>
   </head>
   <body>
+    <nav class="sidebar">
+      <li class="sidebar__logo"><a href="#"><img src="img/logo.svg" alt="logo"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="img/notification.svg" alt="photo"/></a><a class="sidebar__notification--one" href="#"><img src="img/one.svg" alt="1"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="img/my_profile.svg" alt="photo"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="img/settings.svg" alt="photo"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="img/team.svg" alt="photo"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="img/messages.svg" alt="photo"/></a></li>
+    </nav>
+    <main>
+      <header>
+        <div class="hamburger hamburger--squeeze">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+        <div class="breadcrumb"><a class="breadcrumb__item" href="#">Home</a><img class="breadcrumb__separator" src="img/right-arrow.svg" alt="right arrow"/><a class="breadcrumb__item" href="#">Network</a></div>
+        <div class="profile"><img class="profile__photo" src="img/sara.svg" alt="profile photo"/><span class="profile__name">Sarah Freeman</span><i class="fas fa-chevron-down"></i></div>
+      </header>
+      <div class="content">
+        <article class="chats">
+              <!--TODO глянути на гіті в чувака з переменними-->
+              <section class="chats__chat chat"><img class="chat__photo" src="img/miranda.svg" alt="photo"/><span class="chat__name">Miranda Hops</span><img class="chat__mute" src="img/mute.svg" alt="mute"/>
+                <div class="chat__content">
+                  <time class="chat__time">9:32</time><span class="chat__message">Excepteur sint occaecatar…</span>
+                </div>
+              </section>
+              <!--TODO глянути на гіті в чувака з переменними-->
+              <section class="chats__chat chat"><img class="chat__photo" src="img/barry.svg" alt="photo"/><span class="chat__name">Barry Callebaut</span>
+                <div class="chat__content">
+                  <time class="chat__time">22:01</time><span class="chat__message">Nemo enim ipsam volupta…</span>
+                </div>
+              </section>
+              <!--TODO глянути на гіті в чувака з переменними-->
+              <section class="chats__chat chat chat--active"><img class="chat__photo" src="img/stacey.svg" alt="photo"/><span class="chat__name">Stacey Dosh</span>
+                <div class="chat__content">
+                  <time class="chat__time">19:15</time><span class="chat__message">Ut enim ad minima veniam…</span>
+                </div>
+              </section>
+              <!--TODO глянути на гіті в чувака з переменними-->
+              <section class="chats__chat chat"><img class="chat__photo" src="img/michael.svg" alt="photo"/><span class="chat__name">Michael Kors</span>
+                <div class="chat__content">
+                  <time class="chat__time">13:49</time><span class="chat__message">To take a trivial example…</span>
+                </div>
+              </section>
+              <!--TODO глянути на гіті в чувака з переменними-->
+              <section class="chats__chat chat"><img class="chat__photo" src="img/johny.svg" alt="photo"/><span class="chat__name">Johny Cash</span>
+                <div class="chat__content">
+                  <time class="chat__time">10:25</time><span class="chat__message">Great explorer of the truth…</span>
+                </div>
+              </section>
+              <!--TODO глянути на гіті в чувака з переменними-->
+              <section class="chats__chat chat"><img class="chat__photo" src="img/stacey2.svg" alt="photo"/><span class="chat__name">Stacey Dosh</span>
+                <div class="chat__content">
+                  <time class="chat__time">9:32</time><span class="chat__message">Ut enim ad minima veniam…</span>
+                </div>
+              </section>
+        </article>
+        <article class="messages">
+          <div class="search"><img class="search__icon" src="img/search.svg"/>
+            <input class="search__input" type="text" placeholder="Search message..."/>
+          </div>
+          <div class="message-field">
+            <article class="message">
+              <section class="message__date">
+                <p>Today, 17.03.2018</p>
+              </section>
+                  <section class="message__friend"><img class="message__photo" src="img/stacey.svg" alt="profile_photo"/>
+                    <div class="message__content"><span class="message__text">On the other hand, we denounce with righteous indignation!</span>
+                      <time class="message__time">01:14</time>
+                    </div>
+                  </section>
+                  <section class="message__user">
+                    <div class="message__content"><span class="message__text">Which is the same as saying?</span>
+                      <time class="message__time">01:38</time>
+                    </div>
+                  </section>
+                  <section class="message__friend"><img class="message__photo" src="img/stacey.svg" alt="profile_photo"/>
+                    <div class="message__content"><span class="message__text">But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures</span>
+                      <time class="message__time">02:05</time>
+                    </div>
+                  </section>
+                  <section class="message__user">
+                    <div class="message__content"><span class="message__text">To take a trivial example, which of us ever undertakes)</span>
+                      <time class="message__time">03:25</time>
+                    </div>
+                  </section>
+                  <section class="message__friend"><img class="message__photo" src="img/stacey.svg" alt="profile_photo"/>
+                    <div class="message__content"><span class="message__text">But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures</span>
+                      <time class="message__time">02:05</time>
+                    </div>
+                  </section>
+                  <section class="message__friend"><img class="message__photo" src="img/stacey.svg" alt="profile_photo"/>
+                    <div class="message__content"><span class="message__text">But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures</span>
+                      <time class="message__time">02:05</time>
+                    </div>
+                  </section>
+                  <section class="message__friend"><img class="message__photo" src="img/stacey.svg" alt="profile_photo"/>
+                    <div class="message__content"><span class="message__text">But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures</span>
+                      <time class="message__time">02:05</time>
+                    </div>
+                  </section>
+                  <section class="message__user">
+                    <div class="message__content"><span class="message__text">To take a trivial example, which of us ever undertakes)</span>
+                      <time class="message__time">03:25</time>
+                    </div>
+                  </section>
+            </article>
+          </div>
+          <article class="send-field">
+            <input class="send-field__input" type="text" placeholder="Write a message..."/><a class="send-field__image" href="#"><img src="img/smile.svg"/></a><a class="send-field__image" href="#"><img src="img/clip.svg"/></a>
+            <button class="send-field__button" type="button"><img src="img/send.svg"/></button>
+          </article>
+        </article>
+      </div>
+    </main>
   </body>
+  <script>
+    // Look for .hamburger
+    var hamburger = document.querySelector(".hamburger");
+    var bar = document.querySelector(".sidebar");
+    // On click
+    hamburger.addEventListener("click", function () {
+        // Toggle class "is-active"
+        bar.classList.toggle("active");
+        hamburger.classList.toggle("is-active");
+        // Do something else, like open/close menu
+    });
+  </script>
 </html>
