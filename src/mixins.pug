@@ -4,7 +4,7 @@ mixin friend (user)
         img.chat__photo(src=user.photo, alt='photo')
         span.chat__name= user.name
         if user.mute
-            img.chat__mute(src='img/mute.svg', alt='mute')
+            img.chat__mute(src='../img/mute.svg', alt='mute')
         .chat__content
             time.chat__time= user.time
             span.chat__message= user.status
@@ -30,4 +30,4 @@ mixin icons (svg)
             a(href='#')
                 img(src=svg.photo, alt='photo')
             a.sidebar__notification--one(href='#')
-                img(src='img/one.svg', alt='1')
+                img(src='../img/one.svg', alt='1')

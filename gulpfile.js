@@ -9,13 +9,13 @@ function style() {
     return gulp.src('./src/scss/**/*.scss')
         .pipe(sass())
         .pipe(autoprefixer())
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        //.pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 }
 
 function template(){
-    return gulp.src('./src/*pug')
+    return gulp.src('./**/*pug')
         .pipe(pug({
             pretty: true
         }))
@@ -32,7 +32,7 @@ async function build(){
 function watch(){
     browserSync.init({
         server:{
-            baseDir: './dist',
+            baseDir: './dist/src',
             index: 'index.html'
         }
     });

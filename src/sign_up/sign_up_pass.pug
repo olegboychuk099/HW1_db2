@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel='stylesheet', type='text/css', href='../../css/reset.css')
+        link(rel='stylesheet', href='../../css/sign.css')
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css")
+        title sign up
+    body
+        header
+            a(href='#')
+                img(class="sign-logo" src='../../img/sign_logo.svg', alt='logo')
+            .goto
+                p='Already have an account? '
+                a(href='../sign_in/sign_in.html') Log In
+        main
+            .content
+                form
+                    p(class="form__headline--sign-up") Complete your account
+                    input(type="password" class="form__input password" placeholder="Create password")
+                    .complexity
+                        .complexity__item
+                        .complexity__item
+                        .complexity__item
+                    input(type="password" class="form__input" placeholder="Confirm password")
+                    .checkboxs
+                        div(class="pretty p-svg p-curve")
+                            input(type="checkbox")
+                            .state
+                                img(class="svg" src="../../img/done.svg")
+                                label(class="form__label label") I agree to the myFixer.com
+                                    a(href="#" class="label__link") Terms of Service
+                        div(class="pretty p-svg p-curve")
+                            input(type="checkbox")
+                            .state
+                                img(class="svg" src="../../img/done.svg")
+                                label(class="form__label label") I agree to the myFixer.com
+                                    a(href="#" class="label__link") Privacy Policy
+                    //коли буде хост буде і recaptcha
+                    img(src="../../img/recaptcha.svg" style="align-self: flex-start;")
+                    button(class="form__button") Done!
+    script.
+        const pass = document.querySelector(".password");
+        const complexity_item = document.getElementsByClassName('complexity__item');
+        const complexity = document.querySelector(".complexity");
+        const content = document.querySelector(".content");
+        // On click
+        content.addEventListener("click", (event) => {
+            // Toggle class "is-active"
+            if(event.target === pass ){
+                complexity.classList.add("active");
+            }
+            else {
+                complexity.classList.remove("active");
+            }
+            pass.addEventListener("input", (event) => {
+                let lengthOfPass = event.target.value.split('').length;
+                if(lengthOfPass==0){
+                    complexity.classList.remove("active");
+                } else if (lengthOfPass <= 6) {
+                    for (let i = 0; i < complexity_item.length; i++) {
+                        complexity_item[i].classList.remove('complexity__item--good')
+                        complexity_item[i].classList.remove('complexity__item--perfect')
+                    }
+                    complexity_item[0].classList.add('complexity__item--bad');
+                } else if (lengthOfPass <= 10) {
+                    for (let i = 0; i < complexity_item.length; i++) {
+                        complexity_item[i].classList.remove('complexity__item--bad')
+                        complexity_item[i].classList.remove('complexity__item--perfect')
+                    }
+                    for (let i = 0; i < complexity_item.length-1; i++) {
+                        complexity_item[i].classList.add('complexity__item--good');
+                    }
+                } else {
+                    for (let i = 0; i < complexity_item.length; i++) {
+                        complexity_item[i].classList.remove('complexity__item--bad')
+                        complexity_item[i].classList.remove('complexity__item--good')
+                    }
+                    for (let i = 0; i < complexity_item.length; i++) {
+                        complexity_item[i].classList.add('complexity__item--perfect');
+                    }
+                }
+            });
+            // Do something else, like open/close menu
+        });

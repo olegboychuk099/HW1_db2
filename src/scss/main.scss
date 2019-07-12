@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./mixins";
+@import "variables";
+@import "mixins";
 
 body {
   background: #F9FAFC;
@@ -9,6 +9,6 @@ body {
 }
 
 @import "./sidebar";
-@import "./burger/hamburger";
-@import "./header";
-@import "./mesagges";
+@import "burger/hamburger";
+@import "header";
+@import "mesagges";
