@@ -1,0 +1,101 @@
+main
+    include header
+    .content
+        form
+            .headline
+                a.headline__personal.headline__active(href="#") PERSONAL INFORMATION
+                a.headline__account.headline__nonact(href="#") ACCOUNT INFORMATION
+            .underline
+                .underline__personal.underline__active
+                .underline__account.underline__nonact
+            .user__personal.personal-active
+                .user__img
+                    img.user__img--photo(src="../../img/faruh.svg")
+                    .user__img--change
+                        img.change__photo(src="../../img/pen2.svg")
+                        a.change__text(href="#") Change photo
+                .user__change
+                    .form__user
+                        .change__form
+                            p.change__form--text FIRST NAME
+                            input.form__input(type="text" value="Faruh")
+                        .change__form
+                            p.change__form--text LAST NAME
+                            input.form__input(type="text" value="Bernandez")
+                    .form__user
+                        .change__form
+                            p.change__form--text TITLE
+                            select.form__input
+                                option Mr
+                        .change__form
+                            p.change__form--text MOBILE PHONE
+                            .mobile__form
+                                select.mobile__select
+                                    option
+                                input.mobile__input(type="text")
+                    .form__user
+                        .change__form
+                            p.change__form--text COUNTRY
+                            img.user__location(src="../../img/location.svg")
+                            select.form__input
+                                option
+                        .change__form
+                            p.change__form--text COMPANY
+                            input.form__input(type="text")
+            .user__account
+                .user__change
+                    .form__user
+                        .change__form
+                            p.change__form--text username
+                            input.form__input(type="text" value="sarahbarnes")
+                        .change__form
+                            p.change__form--text e-mail
+                            input.form__input(type="mail" value="sarahbbb@gmail.com")
+                .account__change
+                    a.account__change--text(href="../sign_in/reset.html") change password
+                    img.account__separator(src='../../img/profile_arrow.svg', alt='right arrow')
+script.
+    // Look for .hamburger
+    const personal = document.querySelector(".headline__personal");
+    const account = document.querySelector(".headline__account");
+    const user__personal = document.querySelector(".user__personal");
+    const user__account = document.querySelector(".user__account");
+    const underline__personal = document.querySelector(".underline__personal");
+    const underline__account = document.querySelector(".underline__account");
+    // On click
+    personal.addEventListener("click", function () {
+        // Toggle class "is-active"
+        if(user__account.classList.contains("account-active")){
+            user__account.classList.remove("account-active");
+            user__personal.classList.add("personal-active");
+            if(!personal.classList.contains("headline__active")){
+                personal.classList.add("headline__active");
+                account.classList.add("headline__nonact");
+                underline__personal.classList.add("underline__active");
+                underline__account.classList.add("underline__nonact");
+
+                personal.classList.remove("headline__nonact");
+                account.classList.remove("headline__active");
+                underline__personal.classList.remove("underline__nonact");
+                underline__account.classList.remove("underline__active");
+            }
+        }
+    });
+    account.addEventListener("click", function () {
+        // Toggle class "is-active"
+        if (user__personal.classList.contains("personal-active")) {
+            user__personal.classList.remove("personal-active");
+            user__account.classList.add("account-active");
+            if (!account.classList.contains("headline__active")) {
+                account.classList.add("headline__active");
+                personal.classList.add("headline__nonact");
+                underline__account.classList.add("underline__active");
+                underline__personal.classList.add("underline__nonact");
+
+                account.classList.remove("headline__nonact");
+                personal.classList.remove("headline__active");
+                underline__account.classList.remove("underline__nonact");
+                underline__personal.classList.remove("underline__active");
+            }
+        }
+    });

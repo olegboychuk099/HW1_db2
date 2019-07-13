@@ -1,0 +1,8 @@
+include ../mixins
+nav.sidebar
+    -const barIcons = [{"name":"search","photo":"../../img/search2.svg"},{"name":"profile","photo":"../../img/my_profile_act.svg","active":true},{"name":"message","photo":"../../img/messages_nonact.svg"},{"name":"notification","photo":"../../img/notification.svg"}]
+        li.sidebar__logo
+            a(href='#')
+                img(src='../../img/profile_logo.svg', alt='logo')
+        each ico in barIcons
+            +icons(ico)

@@ -21,13 +21,18 @@ mixin message (fromWhom)
                 span.message__text= fromWhom.text
                 time.message__time= fromWhom.time
 mixin icons (svg)
-    if !svg.someElse
-        li.sidebar__icons
+    if svg.active
+        li(class="sidebar__icons sidebar__icons--active")
             a(href='#')
                 img(src=svg.photo, alt='photo')
     else
-        li.sidebar__icons
-            a(href='#')
-                img(src=svg.photo, alt='photo')
-            a.sidebar__notification--one(href='#')
-                img(src='../img/one.svg', alt='1')
+        if !svg.someElse
+            li.sidebar__icons
+                a(href='#')
+                    img(src=svg.photo, alt='photo')
+        else
+            li.sidebar__icons
+                a(href='#')
+                    img(src=svg.photo, alt='photo')
+                a.sidebar__notification--one(href='#')
+                    img(src='../img/one.svg', alt='1')
