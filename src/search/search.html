@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+    <link rel="stylesheet" href="../../css/search.css"/>
+    <title>Profile</title>
+  </head>
+  <body>
+    <nav class="sidebar">
+      <li class="sidebar__logo"><a href="#"><img src="../../img/profile_logo.svg" alt="logo"/></a></li>
+          <li class="sidebar__icons sidebar__icons--active"><a href="#"><img src="../../img/search_act.svg" alt="photo"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="../../img/my_profile_nonact.svg" alt="photo"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="../../img/messages_nonact.svg" alt="photo"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="../../img/notification.svg" alt="photo"/></a></li>
+    </nav>
+    <main>
+      <header>
+        <div class="hamburger hamburger--squeeze">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+        <div class="breadcrumb">
+          <li class="sidebar__logo--phone"><a href="#"><img class="color-logo" src="../../img/profile_logo.svg" alt="logo"/></a></li><a class="breadcrumb__item" href="#">Home</a><img class="breadcrumb__separator" src="../../img/right-arrow.svg" alt="right arrow"/><a class="breadcrumb__item" href="#">Search</a><img class="breadcrumb__separator" src="../../img/right-arrow.svg" alt="right arrow"/><a class="breadcrumb__item" href="#">Results</a>
+        </div>
+        <div class="profile"><span class="profile__name">Sarah Freeman</span><i class="fas fa-chevron-down"></i></div>
+      </header>
+      <div class="content">
+        <form class="filters">
+          <div class="filters__filter">
+            <p class="filters__filter--text">location</p><img class="filter__location" src="../../img/location.svg"/>
+            <select class="filter__select">
+              <option></option>
+            </select>
+          </div>
+          <div class="filters__filter">
+            <p class="filters__filter--text">category</p>
+            <select class="filter__select">
+              <option>Category</option>
+            </select>
+          </div>
+          <div class="filters__filter">
+            <p class="filters__filter--text">subcategory</p>
+            <select class="filter__select">
+              <option>Subcategory</option>
+            </select>
+          </div>
+          <div class="filters__filter">
+            <p class="filters__filter--text">service</p>
+            <select class="filter__select">
+              <option>3 services</option>
+            </select>
+          </div>
+          <div class="filters__filter">
+            <p class="filters__filter--text">period</p>
+            <input class="filter__select"/>
+          </div>
+          <button class="filters__button">SEARCH</button>
+        </form>
+        <div class="separator"></div>
+        <article class="results">
+          <div class="results__sort"><a class="results__map" href="#">Show map</a>
+            <div class="sort__items">
+              <div class="sort__item">
+                <p class="items__text">by price</p>
+              </div>
+              <div class="sort__item">
+                <p class="items__text">by rating</p>
+              </div>
+            </div>
+          </div>
+          <div class="results__list">
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list__item"><img class="item__photo" src="../../img/richard.svg"/>
+              <div class="item__info"><a class="item__name" href="#">Richard Thompson</a>
+                <div class="item__location"><img class="location__ico" src="../../img/location.svg"/>
+                  <p class="item__text">Vancouver, Canada</p>
+                </div>
+                <div class="item__stack">
+                  <div class="item__location">
+                    <p class="item__bold--text">Stack:</p>
+                    <p class="item__text">Python, Django, Sketch</p>
+                  </div><a class="item__more" href="#">More</a>
+                </div>
+                <div class="item__price">
+                  <p class="item__bold--text">Base Daily Rate:</p>
+                  <p class="item__text">$ 1,200 USD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+  <script>
+    // Look for .hamburger
+    const hamburger = document.querySelector(".hamburger");
+    const bar = document.querySelector(".sidebar");
+    // On click
+    hamburger.addEventListener("click", function () {
+        // Toggle class "is-active"
+        bar.classList.toggle("active");
+        hamburger.classList.toggle("is-active");
+        // Do something else, like open/close menu
+    });
+  </script>
+</html>
