@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+    <link rel="stylesheet" href="../../css/profile.css"/>
+    <title>Profile</title>
+  </head>
+  <body>
+    <nav class="sidebar">
+      <li class="sidebar__logo"><a href="#"><img src="../../img/profile_logo.svg" alt="logo"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="../../img/search2.svg" alt="photo"/></a></li>
+          <li class="sidebar__icons sidebar__icons--active"><a href="#"><img src="../../img/my_profile_act.svg" alt="photo"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="../../img/messages_nonact.svg" alt="photo"/></a></li>
+          <li class="sidebar__icons"><a href="#"><img src="../../img/notification.svg" alt="photo"/></a></li>
+    </nav>
+    <main>
+      <header>
+        <div class="hamburger hamburger--squeeze">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+        <div class="breadcrumb">
+          <li class="sidebar__logo--phone"><a href="#"><img class="color-logo" src="../../img/profile_logo.svg" alt="logo"/></a></li><a class="breadcrumb__item" href="#">Home</a><img class="breadcrumb__separator" src="../../img/right-arrow.svg" alt="right arrow"/><a class="breadcrumb__item" href="#">My profile</a>
+        </div>
+        <div class="profile"><span class="profile__name">Faruh Bernandez</span><i class="fas fa-chevron-down"></i></div>
+      </header>
+      <div class="content">
+        <form>
+          <div class="headline"><a class="headline__personal headline__active" href="#">PERSONAL INFORMATION</a><a class="headline__account headline__nonact" href="#">ACCOUNT INFORMATION</a></div>
+          <div class="underline">
+            <div class="underline__personal underline__active"></div>
+            <div class="underline__account underline__nonact"></div>
+          </div>
+          <div class="user__personal personal-active">
+            <div class="user__img"><img class="user__img--photo" src="../../img/faruh.svg"/>
+              <div class="user__img--change"><img class="change__photo" src="../../img/pen2.svg"/><a class="change__text" href="#">Change photo</a></div>
+            </div>
+            <div class="user__change">
+              <div class="form__user">
+                <div class="change__form">
+                  <p class="change__form--text">FIRST NAME</p>
+                  <input class="form__input" type="text" value="Faruh"/>
+                </div>
+                <div class="change__form">
+                  <p class="change__form--text">LAST NAME</p>
+                  <input class="form__input" type="text" value="Bernandez"/>
+                </div>
+              </div>
+              <div class="form__user">
+                <div class="change__form">
+                  <p class="change__form--text">TITLE</p>
+                  <select class="form__input">
+                    <option>Mr</option>
+                  </select>
+                </div>
+                <div class="change__form">
+                  <p class="change__form--text">MOBILE PHONE</p>
+                  <div class="mobile__form">
+                    <select class="mobile__select">
+                      <option></option>
+                    </select>
+                    <input class="mobile__input" type="text"/>
+                  </div>
+                </div>
+              </div>
+              <div class="form__user">
+                <div class="change__form">
+                  <p class="change__form--text">COUNTRY</p><img class="user__location" src="../../img/location.svg"/>
+                  <select class="form__input">
+                    <option></option>
+                  </select>
+                </div>
+                <div class="change__form">
+                  <p class="change__form--text">COMPANY</p>
+                  <input class="form__input" type="text"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="user__account">
+            <div class="user__change">
+              <div class="form__user">
+                <div class="change__form">
+                  <p class="change__form--text">username</p>
+                  <input class="form__input" type="text" value="sarahbarnes"/>
+                </div>
+                <div class="change__form">
+                  <p class="change__form--text">e-mail</p>
+                  <input class="form__input" type="mail" value="sarahbbb@gmail.com"/>
+                </div>
+              </div>
+            </div>
+            <div class="account__change"><a class="account__change--text" href="../sign_in/reset.html">change password</a><img class="account__separator" src="../../img/profile_arrow.svg" alt="right arrow"/></div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script>
+      // Look for .hamburger
+      const personal = document.querySelector(".headline__personal");
+      const account = document.querySelector(".headline__account");
+      const user__personal = document.querySelector(".user__personal");
+      const user__account = document.querySelector(".user__account");
+      const underline__personal = document.querySelector(".underline__personal");
+      const underline__account = document.querySelector(".underline__account");
+      // On click
+      personal.addEventListener("click", function () {
+          // Toggle class "is-active"
+          if(user__account.classList.contains("account-active")){
+              user__account.classList.remove("account-active");
+              user__personal.classList.add("personal-active");
+              if(!personal.classList.contains("headline__active")){
+                  personal.classList.add("headline__active");
+                  account.classList.add("headline__nonact");
+                  underline__personal.classList.add("underline__active");
+                  underline__account.classList.add("underline__nonact");
+      
+                  personal.classList.remove("headline__nonact");
+                  account.classList.remove("headline__active");
+                  underline__personal.classList.remove("underline__nonact");
+                  underline__account.classList.remove("underline__active");
+              }
+          }
+      });
+      account.addEventListener("click", function () {
+          // Toggle class "is-active"
+          if (user__personal.classList.contains("personal-active")) {
+              user__personal.classList.remove("personal-active");
+              user__account.classList.add("account-active");
+              if (!account.classList.contains("headline__active")) {
+                  account.classList.add("headline__active");
+                  personal.classList.add("headline__nonact");
+                  underline__account.classList.add("underline__active");
+                  underline__personal.classList.add("underline__nonact");
+      
+                  account.classList.remove("headline__nonact");
+                  personal.classList.remove("headline__active");
+                  underline__account.classList.remove("underline__nonact");
+                  underline__personal.classList.remove("underline__active");
+              }
+          }
+      });
+    </script>
+  </body>
+  <script>
+    // Look for .hamburger
+    const hamburger = document.querySelector(".hamburger");
+    const bar = document.querySelector(".sidebar");
+    // On click
+    hamburger.addEventListener("click", function () {
+        // Toggle class "is-active"
+        bar.classList.toggle("active");
+        hamburger.classList.toggle("is-active");
+        // Do something else, like open/close menu
+    });
+  </script>
+</html>
