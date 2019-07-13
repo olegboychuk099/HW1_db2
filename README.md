@@ -10,3 +10,5 @@
 <p><a href="https://olegboychuk099.github.io/HW1_DB2/src/sign_up/verify_up.html"> <b>Verify</b></a>
 <h2><b>Profile</b></h2>
 <p><a href="https://olegboychuk099.github.io/HW1_DB2/src/profile/profile.html"> <b>Profile</b></a>
+<h2><b>Search</b></h2>
+<p><a href="https://olegboychuk099.github.io/HW1_DB2/src/search/search.html"> <b>Search</b></a>
