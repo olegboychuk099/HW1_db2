@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
     <link rel="stylesheet" href="../../css/search.css"/>
     <title>Profile</title>
@@ -65,11 +66,17 @@
         <article class="results">
           <div class="results__sort"><a class="results__map" href="#">Show map</a>
             <div class="sort__items">
-              <div class="sort__item">
-                <p class="items__text">by price</p>
+              <div class="pretty p-default p-round p-thick">
+                <input type="radio" name="radio1" checked="checked"/>
+                <div class="state p-success-o">
+                  <label class="items__text">by price</label>
+                </div>
               </div>
-              <div class="sort__item">
-                <p class="items__text">by rating</p>
+              <div class="pretty p-default p-round p-thick">
+                <input type="radio" name="radio1"/>
+                <div class="state p-success-o">
+                  <label class="items__text">by rating</label>
+                </div>
               </div>
             </div>
           </div>

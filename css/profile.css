@@ -442,6 +442,13 @@ header {
 .breadcrumb__item {
   margin-right: 12px;
   margin-left: 12px; }
+  @media (max-width: 720px) {
+    .breadcrumb__item {
+      display: none; } }
+
+@media (max-width: 720px) {
+  .breadcrumb__separator {
+    display: none; } }
 
 .profile {
   display: -webkit-box;
