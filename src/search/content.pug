@@ -28,10 +28,14 @@ main
             .results__sort
                 a.results__map(href="#") Show map
                 .sort__items
-                    .sort__item
-                        p.items__text by price
-                    .sort__item
-                        p.items__text by rating
+                    .pretty.p-default.p-round.p-thick
+                        input(type="radio" name="radio1" checked)
+                        .state.p-success-o
+                            label.items__text by price
+                    .pretty.p-default.p-round.p-thick
+                        input(type="radio" name="radio1")
+                        .state.p-success-o
+                            label.items__text by rating
             .results__list
                 .list__item
                     img.item__photo(src="../../img/richard.svg")

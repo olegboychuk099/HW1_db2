@@ -27,6 +27,14 @@ header {
 .breadcrumb__item {
   margin-right: 12px;
   margin-left: 12px;
+  @include for-tablet {
+    display: none;
+  }
+}
+.breadcrumb__separator{
+  @include for-tablet {
+    display: none;
+  }
 }
 
 .profile {
