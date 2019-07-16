@@ -27,6 +27,7 @@ async function build(){
     await style();
     await template();
     await sendImg();
+    await sendJS();
 }
 
 function watch(){
@@ -43,6 +44,11 @@ function watch(){
 function sendImg(){
     return gulp.src('./src/img/**')
         .pipe(gulp.dest('dist/img'))
+}
+
+function sendJS(){
+    return gulp.src('./src/js/**')
+        .pipe(gulp.dest('dist/js'))
 }
 
 exports.style = style;
